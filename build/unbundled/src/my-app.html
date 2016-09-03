@@ -1,0 +1,62 @@
+<html><head><link rel="import" href="../bower_components/polymer/polymer.html">
+
+</head><body><dom-module id="my-app">
+
+  <template>
+
+    <style>
+
+      :host {
+        display: block;
+        width: 400px;
+      }
+
+      #input,
+      #output {
+        padding: 16px;
+      }
+
+      #input {
+        color: #fff;
+        background: #3F51B5;
+      }
+
+      #input input {
+        box-sizing: border-box;
+        width: 100%;
+      }
+
+      #output {
+        color: #000;
+        background: #03A9F4;
+      }
+
+    </style>
+
+    <div id="input">
+      <label for="inputname">Name</label>
+      <input id="inputname" type="text" value="{{name::input}}">
+    </div>
+    <div id="output">{{name}}</div>
+
+  </template>
+
+  <script>
+
+    Polymer({
+
+      is: 'my-app',
+
+      properties: {
+        name: {
+          type: String,
+          value: 'John Doe'
+        }
+      }
+
+    });
+
+  </script>
+
+</dom-module>
+</body></html>
